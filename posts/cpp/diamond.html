@@ -49,26 +49,46 @@
 			<section class="ftco-section ftco-no-pt ftco-no-pb">
 	    	<div class="container">
 	    		<div class="row d-flex">
-	    			<div class="col-xl-8 px-md-5 py-5">
-					
-	    					<div class="blog-entry ftco-animate d-md-flex">
-								<a href="../../diamond.html"></a>
-								<div class="text text-2 pl-md-4">
-									<h3 class="mb-2"><a href="#">What is diamond problem in C++</a></h3>
-									<div class="meta-wrap">
-										<p class="meta">
-											<span><i class="icon-calendar mr-2"></i>17 May 2020</span>
-										</p>
-									</div>
-									<p class="mb-4">Multiple Inheritance is a feature of C++ where a class can inherit from more than one classes.
-										The constructors of inherited classes are called in the same order in which they are inherited.
-										For example, in the following program, B’s constructor is called before A’s constructor..</p>								
-								</div>
+					<div class="blog-entry ftco-animate d-md-flex">
+						<a href="../../diamond.html"></a>
+						<div class="text text-2 pl-md-4">
+							<h3 class="mb-2"><a href="#">Diamond problem (C++)</a></h3>							
+							<div class="meta-wrap">
+								<p class="meta">
+									<span><i class="icon-calendar mr-2"></i>17 May 2020</span>
+								</p>
 							</div>
-	    				
-			    	</div><!-- END-->
-					
-	    	</div>
+								
+								<p>
+								<h6 class="mb-2"><a href="#">Opinion:</a></h6>
+								Interestingly <b>diamond problem</b> is a most commonly asked interview question. But, In my experience developers won't encouter this scenario very often.
+								</p>
+								<p>
+								<h6 class="mb-2"><a href="#">Diamond Problem:</a></h6>
+								Multiple inhertance is one of the useful feature in OOP programming. In multiple inheritance a derived class can be derived from multiple base classes.
+								During this process attibutes of base class will be created in derived class. Lets take the below example, Player is a base class and
+								Cricketer and Shooter are the derived classes. These two derived class will have the own copy of base class attributes. 
+								</p>
+								
+								<p>
+								SportsIcon is a new derived class which inherits attributes from both Cricketer and Shooter class which alreay inherited from Player class.
+								Lets say if we are trying to create an object of SportsIcon class. The SportsIcon object couldn't decide which base class needs to be 
+								called. So it creates the copy of both class(see output in bottom).
+								</p>
+								
+								<p>
+								<h6 class="mb-2"><a href="#">How to fix:</a></h6>
+								To overcome the diamond problem, change  base class inheritance to virtual inheritance(refer right image makred in white). 
+								</p>
+								
+								<p>
+								<img src="diamond_1.png" alt="diamond problem">
+								</p>
+								
+																
+						</div>
+					</div>					
+				</div>
 	    </section>
 		</div><!-- END ayyavu-MAIN -->
 		
